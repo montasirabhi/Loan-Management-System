@@ -1,0 +1,961 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Potro</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-left">
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="menu.html"><i class="fa-brands fa-creative-commons-nd" style="color: #fff; font-size: 30px;"></i></a></li> 
+                    &nbsp; &nbsp;
+                <li><a href="index.html"><i class="fa-solid fa-house"style="color: #fff; font-size: 30px;"></i></a></li>
+                
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+            <img src="images/profile-1.jpg" alt="">
+            </div>
+        </div>
+<!-----------------------Settings------------------------>
+        <div class="settings-menu">
+            <div id="dark-btn" >
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                <img src="images/profile-1.jpg" alt="">
+                    <div>
+                        <p></p>
+                       <a href="#">See Your Profile</a>
+                    </div>
+                 
+            </div>
+            <hr>
+            <div class="user-profile">
+                <img src="images/feedback.png">
+                <div>
+                    <p>Give Feedback</p>
+                   <a href="#">Help us to improve </a>
+                </div>
+    
+            </div>
+            <hr>
+            <div class="settings-links">
+                <img src="images/setting.png" class="settings-icon" > 
+                <a href="#">Settings & Privacy <img src="images/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="images/help.png" class="settings-icon" > 
+                <a href="#">Help & Support <img src="images/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="images/display.png" class="settings-icon" > 
+                <a href="#">display & Accessiblity <img src="images/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="images/logout.png" class="settings-icon" > 
+                <a href="login.html">Logout <img src="images/arrow.png" width="10px"></a>
+            </div>
+
+
+            </div>
+
+
+
+
+    </nav>
+
+
+    <div class="container">
+        <!------------------------ left-sidebar ------------------------------>
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="collection_list.html"><img src="images/news.png"> Collection List </a>
+                <a href="reset_pay.html"><img src="images/friends.png"> Reset Pay </a>
+                <a href="red_list.html"><img src="images/group.png"> Red List </a>
+                <a href="quality.html"><img src="images/marketplace.png"> Quality Change </a>
+                <a href="next.html"><img src="images/watch.png"> Next Day List </a>
+            </div>
+            <div class="shortcut-links">
+                <p style=" margin: 25px 0; color: #626262; font-weight: 500;">Your Shortcut</p>
+                <a href="add-member.html"><img src="images/shortcut-1.png">ADD MEMBERS</a>
+                <a href="members.html"><img src="images/shortcut-2.png">SEE ALL MEMBERS</a>
+
+                <div class="hide-short">
+                <a href="my_members.html"><img src="images/shortcut-3.png">MY MEMBERS</a>
+                <a href="collection.html"><img src="images/shortcut-4.png">Collection</a>
+                <a href="dps_savings_collection.html"><img src="images/shortcut-3.png">DPS & Savings</a>
+                <a href="withdraw_dps.html"><img src="images/shortcut-4.png">Withdraw DPS</a>
+                <a href="withdraw_savings.html"><img src="images/shortcut-4.png">Withdraw Savings</a>
+               </div>
+
+
+                <p class="see-more" onclick="seeToggle()">See More</p>
+            </div>
+        </div>
+        <script>
+        const  button  = document.querySelector(".see-more");
+        var shortcut = document.querySelector(".hide-short");
+
+function  seeToggle() {
+    shortcut.classList.toggle("hide-short-no");
+    if(button.innerText === 'See More'){
+        button.innerText = 'See Less';
+    }else{
+        button.innerText = 'See More';
+    }
+}
+
+</script>
+        <!------------------------ main-content ------------------------------>
+        <div class="main-content">
+
+            <div class="story-gallery">
+                <div class="story story1">
+                
+                    <label><img src="images/upload.png"><input type="file" id="file-upload"><style>input[type="file"]{display: none;}</style></label>
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <img src="images/member-1.png">
+                    <p>Abhi</p>
+                </div>
+                <div class="story story3">
+                    <img src="images/member-2.png">
+                    <p>Abhi</p>
+                </div>
+                <div class="story story4">
+                    <img src="images/member-3.png">
+                    <p>Abhi b</p>
+                </div>
+                <div class="story story5">
+                    <img src="images/member-4.png">
+                    <p>cAbhid</p>
+                </div>
+            </div>
+<!------------------------POST------------------------------>
+<div class="write-post-container">
+            <div class="user-profile">
+            <img src="images/profile-1.jpg" alt="">
+        <div>
+            <p>Montasir Abhi</p>
+            <small><i class="fa-solid fa-earth-americas"></i> &nbsp; Public <i class="fa-solid fa-caret-down"></i></small>
+        </div>
+    </div>
+
+    <div class="post-input-container">
+    <form action="" autocomplete="off" method="POST" enctype="multipart/form-data">
+            <div class="error-text" style="display:none;">Error</div>
+        <textarea row="3" placeholder=" What's on your mind ?" name="post_data"></textarea>
+            <div class="add-post-links">
+            <label><img src="images/live-video.png"><input type="file" id="file-upload"><style>input[type="file"]{display: none;}</style>Vedio</label>
+                <label><img src="images/photo.png"><input type="file" id="file-upload" name="image"><style>input[type="file"]{display: none;}</style>Photo</label>
+                <label><img src="images/feeling.png"> <input type="file" id="file-upload"><style>input[type="file"]{display: none;}</style>Feeling</label>
+                <div class="submit">
+                <input type="submit" value="POST" class="button">
+            </div>
+            </div>
+            </form>
+        </div>
+        
+  <div class='post-container'>
+             <div class='post-row'>
+                <div class='user-profile'>
+                   <img src='images/profile-1.jpg '>
+                       <div>
+                          <p>Montasir Abhi</p>
+                           <span>30-Jun-2024</span>
+                        </div>
+                </div>
+                <a href='#'><i class='fas fa-ellipsis-v'></i></a>
+            </div>
+           
+            <p class='post-text'> <span> Hello World !</span></p> 
+            <img src='$photo_path' style='max-width:100%;' alt=''>
+            
+         
+            <div class='post-row'>
+           You Can Contact With Me By My ID :  9841845558
+            
+        </div>
+        <hr>
+    </div>
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="images/profile-pic.png">
+                            <div>
+                                <p>Montasir Abhi</p>
+                                <span>Dec 26, 2023 - 08:43 pm </span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    </div>
+                   
+                    <p class="post-text"> <span>Dou you Know?</span> is Free For All. You Know that ? <a href="#">#Montasir Abhi</a></p>
+                    <img src="images/feed-image-1.png" class="post-img">
+
+
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="images/like-blue.png">12K</div>
+                            <div><img src="images/comments.png">6k</div>
+                            <div><img src="images/share.png">120</div>
+                        </div>
+                        <div class="post-profile-icon">
+                                <img src="images/profile-pic.png"> &nbsp;<i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="images/member-1.png">
+                            <div>
+                                <p>Abcde</p>
+                                <span>Dec 26, 2023 - 08:43 pm </span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    </div>
+                   
+                    <p class="post-text"> <span>Dou you Know?</span> is Free For All. You Know that ? <a href="#">#Montasir Abhi</a></p>
+                    <img src="images/feed-image-2.png" class="post-img">
+
+
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="images/like.png">12K</div>
+                            <div><img src="images/comments.png">6k</div>
+                            <div><img src="images/share.png">120</div>
+                        </div>
+                        <div class="post-profile-icon">
+                                <img src="images/profile-pic.png"> &nbsp;<i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="images/member-3.png">
+                            <div>
+                                <p>XYZ</p>
+                                <span>Dec 26, 2023 - 08:43 pm </span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    </div>
+                   
+                    <p class="post-text"> <span>Dou you Know?</span> is Free For All. You Know that ? <a href="#">#Montasir Abhi</a></p>
+                    <img src="images/feed-image-3.png" class="post-img">
+
+
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="images/like.png">12K</div>
+                            <div><img src="images/comments.png">6k</div>
+                            <div><img src="images/share.png">120</div>
+                        </div>
+                        <div class="post-profile-icon">
+                                <img src="images/profile-pic.png"> &nbsp;<i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="images/member-4.png">
+                            <div>
+                                <p>Adsfzsrg</p>
+                                <span>Dec 26, 2023 - 08:43 pm </span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    </div>
+                   
+                    <p class="post-text"> <span>Dou you Know?</span> is Free For All. You Know that ? <a href="#">#Montasir Abhi</a></p>
+                    <img src="images/feed-image-4.png" class="post-img">
+
+
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="images/like.png">12K</div>
+                            <div><img src="images/comments.png">6k</div>
+                            <div><img src="images/share.png">120</div>
+                        </div>
+                        <div class="post-profile-icon">
+                                <img src="images/profile-pic.png"> &nbsp;<i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="load-more-btn">Load More</button>
+        </div>
+</div>
+        <!------------------------ right-sidebar ------------------------------>
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Events</h4>
+                <a href="#">See All</a>               
+                </div>
+                <div class="event">
+                    <div class="left-event">
+                        <h3>17</h3>
+                        <span>March</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Memory_1</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> &nbsp; Hatigara , Chakpara</p>
+                        <a href="#">More Info</a>
+                    </div>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>26</h3>
+                    <span>August</span>
+                </div>
+                <div class="right-event">
+                    <h4>Memory_2</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> &nbsp; Hatigara , Chakpara</p>
+                    <a href="#">More Info</a>
+                </div>
+        </div>
+        <div class="sidebar-title">
+            <h4>Advertisement</h4>
+            <a href="#">Close </a>
+        </div>
+        <img src="images/advertisement.png" class="sidebar-ads">
+
+        <div class="sidebar-title">
+            <h4>Conversation</h4>
+            <a href="#">Hide Chat </a>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="images/member-1.png">
+            </div>
+            <p>ABCD</p>
+        </div>
+        <div class="online-list">
+            <div class="online">
+                <img src="images/member-2.png">
+            </div>
+            <p>EFGH</p>
+        </div>
+        <div class="online-list">
+            <div class="online">
+                <img src="images/member-3.png">
+            </div>
+            <p>ABCD</p>
+        </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>Copyright 2024 - MD. Montasir Rahman Abhi</p>
+    </div>
+
+<script src="nav-script.js"></script>
+<script src="js/post.js"></script>
+
+
+</body>
+</html>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-color: #efefef;
+    --nav-color: #1876f2;
+    --bg-color:#fff;
+}
+
+.dark-theme{
+    --body-color: #0a0a0a;
+    --nav-color: #000;
+    --bg-color:#000;
+}
+
+
+
+body{
+    background: var(--body-color);
+    transition: background 0.3s;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav-color);
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index:100;
+}
+.logo{
+    width: 160px;
+    margin-right: 45px;
+}
+.nav-left , .nav-right{
+    display: flex;
+    align-items: center;
+}
+.nav-left ul li{
+    list-style: none;
+    display: none;
+}
+.nav-left ul li img{
+    width: 28px;
+    margin: 0 15px;
+    display: none;
+}
+.nav-user-icon img{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav-user-icon{
+    margin-left: 30px;
+}
+.search-box{
+    background: #efefef;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.search-box img {
+    width: 18px;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff ;
+    border-radius: 50%;
+    background: blue;
+    position:absolute;
+    top:0 ;
+    right: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+}
+.left-sidebar{
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+}
+.right-sidebar{
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
+}
+.main-content{
+    flex-basis:47% ;
+}
+.imp-links a , .shortcut-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width: fit-content;
+    cursor: pointer;
+}
+.imp-links a img{
+    width: 25px;
+    margin-right:15px ;
+}
+.imp-links a:last-child{
+    color: #1876f2;
+}
+.imp-links{
+    border-bottom: 1px solid #ccc;
+}
+ /* ----------------------------------------------         Pop Up button SEE MORE      ----------------------------------------------- */
+.see-more{
+    color: #1876f2;
+    cursor: pointer;
+    text-align: right;
+}
+.hide-short{
+   display: none;
+   
+}
+.hide-short-no {
+   display: inline;
+   transition: display 3s;
+}
+/* ----------------------------------------------         Pop Up button SEE MORE  End     ----------------------------------------------- */
+
+.shortcut-links a img{
+    width: 40px;
+    border-radius: 4px;
+    margin-right:15px ;
+}
+.shortcut-links p{
+    margin: 25px 0;
+    color: #626262;
+    font-weight: 500;
+}
+.sidebar-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.right-sidebar h4{
+    font-weight: 600;
+    font-size: 16px;
+}
+.sidebar-title a{
+    text-decoration: none;
+    color: #1876f2;
+    font-size: 12px;
+}
+.event{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.left-event{
+    border-radius: 10px;
+    height: 65px;
+    width: 65px;
+    margin-right: 15px;
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.event p{
+    font-size: 12px;
+}
+.event a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #1876f2;
+}   
+.left-event span{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background: #1876f2;
+    color: #fff;
+    font-size: 10px;
+    padding:4px 0;
+}
+.sidebar-ads{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius:4px ;
+}
+.online-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.online-list .online img{
+    width: 40px;
+    border-radius: 50%;
+}
+.online-list .online{
+    width: 40px;
+    border-radius: 50%;
+    margin-right:15px ;
+}
+.online-list .online::after{
+    top: unset;
+    bottom:5px ;
+}
+.story-gallery{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.story{
+    flex-basis: 18%;
+    padding-top: 32%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.story img{
+    position: absolute;
+    width: 45px;
+    border-radius: 50%;
+    top:10px;
+    left: 10px;
+    border: 5px solid #1876f2 ;
+}
+
+.story p{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+
+}
+.story1{
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)) , url("images/profile-1.jpg");
+}
+.story2{
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)) , url(images/status-2.png);
+}
+.story3{
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)) , url(images/status-3.png);
+}
+.story4{
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)) , url(images/status-4.png);
+}
+.story5{
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)) , url(images/status-5.png);
+}
+.story.story1 img{
+    top: unset;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    border: 0;
+    width: 35px;
+}
+.write-post-container{
+    width: 100%;
+    background: var(--bg-color);
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+}
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin:10px ;
+}
+.user-profile p{
+    margin-bottom:-2px;
+    font-weight:500 ;
+    color: #626262;
+}
+.user-profile small{
+    font-size: 12px;
+}
+.post-input-container{
+    padding-left: 55px;
+    padding-top: 20px;
+}
+.post-input-container textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background:transparent;
+    resize: none;
+}
+.add-post-links{
+    display: flex;
+    margin-top: 10px;
+    position: relative;
+}
+.add-post-links label {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #626262 ;
+    margin-right: 30px;
+    font-size: 13px;
+}
+.add-post-links label img{
+    width: 20px;
+    margin-right: 10px;
+}
+.add-post-links .button{
+    background: #1876f2;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    height: 25px;
+    width:50px;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+}
+.post-container{
+    width: 100%;
+    background:var(--bg-color) ;
+    border-radius:6px ;
+    padding:20px;
+    color: #626262;
+    margin: 20px 0;
+}
+.user-profile span{
+    font-size: 13px;
+    color: #9a9a9a;;
+}
+.post-text{
+    color: #9a9a9a ;
+    margin: 15px 0;
+    font-size: 15px;
+}
+.post-text span{
+    color:#626262;
+    font-weight: 500;
+}
+.post-text a{
+    color:#1876f2;
+    text-decoration: none;
+}
+.post-img{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom:5px ;
+}
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.activity-icons div img{
+    width: 18px;
+    margin-right: 10px;
+}
+.activity-icons div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.post-profile-icon{
+    display: flex;
+    align-items: center;
+}
+.post-profile-icon img{
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.post-row a{
+    color: #9a9a9a;
+}
+.load-more-btn{
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #9a9a9a;
+    color: #626262;
+    background: transparent;
+    border-radius: 4px;
+}
+.footer{
+    text-align: center;
+    color: #9a9a9a;
+    padding: 10px 0 20px;
+    font-size: 13px;
+}
+.settings-menu{
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    background: var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    overflow: hidden;
+    top: 108%;
+    right: 5%;
+    max-height:0 ;
+    transition: max-height 0.3s ;
+}
+.settings-menu-height{
+    max-height: 450px;
+}
+.user-profile a{
+    font-size: 12px;
+    color: #1876f2;
+    text-decoration: none;
+}
+.settings-menu-inner{
+    padding: 20px;
+
+}
+.settings-menu hr{
+    border: 0;
+    height: 1px;
+    background: #9a9a9a;
+    margin: 15px 0;
+}
+.settings-links{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.settings-links .settings-icon{
+    width: 38px;
+    margin-right: 10px;
+    border-radius: 50%;   
+}
+.settings-links a{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #626262;
+}
+#dark-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ccc;
+    width: 45px;
+    border-radius: 15px;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 0.5s, background 0.5s;
+}
+#dark-btn span{
+    height: 18px;
+    width: 18px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+#dark-btn.dark-btn-on{
+    padding-left: 23px;
+    background: #0a0a0a;
+}
+.error-text{
+    display: none;
+    color: #851923;
+    padding: 4px 6px;
+    text-align: center;
+    border-radius: 4px;
+    background: #ffe3e5;
+    border: 1px solid #dfa5ab;
+    margin-bottom: 8px;
+}
+hr{
+    border: 0;
+    height: 1px;
+    background: #9a9a9a;
+    margin: 15px 0;
+}
+@media only screen and (max-width: 600px) {
+   .right-sidebar{
+    display: none;
+   }
+   .left-sidebar{
+    display: none;
+   }
+   nav{
+    flex-wrap: wrap;
+   }
+   .search-box{
+    display: none;
+   }
+   .logo{
+    width: 110px;
+    margin-right: 20px;
+   }
+   .nav-left ul li img{
+
+    width: 20px;
+    margin: 0 8px;
+   }
+   .nav-user-icon img{
+    width: 30px;
+   }
+   .nav-user-icon{
+    margin-left:0 ;
+   }
+   .add-post-links{
+    flex-wrap: wrap;
+   }
+   .main-content{
+    flex-basis: 100%;
+   }
+   .story img{
+        width: 20px;
+        border-width: 3px ;
+   }
+   .story p{
+    font-size: 10px;
+   }
+   .story .story1 img{
+    width: 30px;
+    bottom: 30px;
+   }
+   .add-post-links a{
+    margin-right: 12px;
+    font-size: 9px;
+   }
+   .add-post-links a img{
+        width: 16px;
+        margin-right: 5px;
+   }
+   .post-input-container{
+    padding-left: 0;
+   }
+   .nav-left ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+}
+</style>
+

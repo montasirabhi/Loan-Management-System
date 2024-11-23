@@ -1,0 +1,130 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<div class="search-box">
+    <form method="GET" action="">
+        <input type="text" name="search" class="input-search" placeholder="Type to Search..." value="">
+        <button type="submit" class="btn-search"><i class="fas fa-search"></i></button>
+    </form>
+</div>
+
+
+<table>
+<tr>
+    <th>Serial No</th>
+    <th>Member Name</th>
+    <th>Guardian Name</th>
+    <th>Member NID</th>
+    <th>Mobile Number</th>
+    <th>Present Address</th>
+    <th>Permanent Address</th>
+    <th>Branch</th>
+    <th>Added By</th>
+    <th>Adder Unique ID</th>
+    <th>Adding Date</th>
+</tr>
+
+    <tr>
+        <td>01</td>
+        <td>Member_Name</td>
+        <td>Gardian</td>
+        <td>5645646</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td><a href='member.html?nid=$nid'><button>View</button></a></td>
+    </tr>
+
+</table>
+
+
+<br><br>
+<a href="index.html"><button style="height: 30px; width: 160px; background: rgb(230, 234, 247); border-radius: 8px; border: none; color: black; margin-left:50%; cursor: pointer;">Back To Home</button></a>
+
+<style>
+body{
+    background-color: #6db77d;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse; /* Added for better table styling */
+}
+
+table th, table td{
+    border: 1px solid #ddd; /* Added border to table cells */
+    padding: 8px; /* Added padding to table cells */
+}
+
+table th{
+    height: 40px;
+    width: 160px;
+    background-color: #18f26c;
+    cursor: pointer;
+}
+
+table td{
+    text-align: center;
+    background: rgb(230, 234, 247);
+}
+
+table td button{
+    height: 30px;
+    width: 80px;
+    background: rgb(230, 234, 247);
+    border-radius: 8px;
+    border: none;
+    color: aqua;
+    cursor: pointer;
+}
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.input-search{
+    height: 50px;
+    width: 200px; /* Increased width for better user experience */
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #33e958;
+    color: #fff;
+}
+
+.input-search::placeholder{
+    color:rgba(255,255,255,.5);
+}
+
+.btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px; /* Adjusted position for better alignment */
+    color: #fff;
+    background-color: transparent;
+}
+
+.input-search:focus{
+    width: 300px; /* Expanded width on focus */
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+</style>

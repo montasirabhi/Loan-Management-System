@@ -1,0 +1,104 @@
+<?php
+
+// যদি ইউজার লগইন না করে থাকে তাহলে লগইন পেজে রিডিরেক্ট করা
+session_start();
+include('php/conn.php');
+$unique_id = $_SESSION['unique_id'];
+
+if(empty($unique_id)){
+    header("Location: login.php");
+    exit();
+}
+$qry = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$unique_id}'");
+if(mysqli_num_rows($qry) > 0){
+    $row = mysqli_fetch_assoc($qry);
+    if($row){
+        $_SESSION['verification_status'] = $row['verification_status'];
+        if($row['verification_status'] != 'Verified'){
+            header("Location: verify.php");
+            exit();
+        }
+    }
+}
+
+?>
+
+<?php
+
+echo "
+<table>
+<tr>
+<th>Serial No</th> <!-- Added Serial No column -->
+<th>Savings</th>
+<th>Total Savings</th>
+<th>DPS</th>
+<th>Total DPS</th>
+<th>Field Officer</th>
+<th>Field Officer ID</th>
+<th>Date</th>
+</tr>";
+
+if(isset($_GET['m_id'])){
+    $getid = $_GET['m_id'];
+   
+    $sql10 = "SELECT * FROM collections WHERE m_id = $getid";
+    $query3 = $conn->query($sql10);
+  
+    $serial_no = 1; // Initialize serial number
+
+    while($data = mysqli_fetch_assoc($query3)){
+        $savings = $data['savings'];
+        $total_savings = $data['total_savings'];
+        $dps = $data['dps'];
+        $total_dps = $data['total_dps'];
+        $fielder = $data['fielder'];
+        $fielder_id = $data['fielder_id'];
+        $date = $data['date'];
+        
+        echo "
+        <tr>
+            <td>$serial_no</td> <!-- Display serial number -->
+            <td>$savings</td>
+            <td>$total_savings</td>
+            <td>$dps</td>
+            <td>$total_dps</td>
+            <td>$fielder</td>
+            <td>$fielder_id</td>
+            <td>$date</td>
+        </tr>";
+
+        $serial_no++; // Increment serial number
+    }
+}
+echo "</table>";
+?>
+<br><br>
+<a href="index.php"><Button style=" height: 30px; width: 160px; background: rgb(230, 234, 247); border-radius: 8px; border: none; color: black; margin-left:50%; cursor: pointer;">Back To Home</Button></a>
+
+</body>
+<style>
+    table{
+        margin: auto;
+    }
+    table th{
+        height: 40px;
+        width: 160px;
+        background-color: #18f26c;
+        cursor: pointer;
+    }
+    table td{
+        text-align: center;
+        background: rgb(230, 234, 247);
+        cursor: pointer;
+    }
+    p{
+        font-size: 15px;
+        padding-bottom: 8px;
+        margin-left:10%;
+    }
+    span{
+        font-size: 15px;
+        position: absolute;
+        left:40%;
+    }
+</style>

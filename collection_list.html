@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch-wise Customer List</title>
+    <style>
+        /* General table styling */
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            overflow-x: auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        select {
+            width: 200px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            background-color: #f8f8f8; 
+            font-size: 16px; 
+            color: #333; 
+            cursor: pointer; 
+            margin: 0 10px; 
+            transition: border-color 0.3s; 
+        }
+
+        select:focus {
+            border-color: #4CAF50; 
+            outline: none; 
+        }
+
+        button {
+            padding: 10px 15px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            transition: background-color 0.3s; 
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+
+        label {
+            font-size: 16px; 
+            margin-right: 10px; 
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            table {
+                font-size: 14px;
+            }
+
+            select {
+                width: 180px;
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+
+            select {
+                width: 100%;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 12px;
+                width: 100%;
+            }
+
+            label {
+                font-size: 14px;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            table {
+                font-size: 12px;
+                overflow-x: scroll;
+            }
+
+            select {
+                width: 100%;
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 6px 10px;
+                width: 100%;
+            }
+
+            label {
+                font-size: 12px;
+            }
+
+            /* Stack form elements */
+            form {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Branch-wise Customer List</h2>
+
+    <form method="GET" action="">
+        <label for="branch">Select Branch: </label>
+        <select name="branch" id="branch" required>
+            <option value="">-- Select Branch --</option>
+            <option value="Bera">Bera</option>
+            <option value="Nakalia">Nakalia</option>
+            <option value="Haturia">Haturia</option>
+            <option value="Sumasnari">Sumasnari</option>
+        </select>
+
+        <label for="status">Select Status: </label>
+        <select name="status" id="status" required>
+            <option value="">-- Select Status --</option>
+            <option value="Paid">Paid</option>
+            <option value="Unpaid">Unpaid</option>
+            <option value="Part Paid">Part Paid</option>
+        </select>
+
+        <button type="submit">Check</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>Serial No</th>
+            <th>Loan UID</th>
+            <th>Member Name</th>
+            <th>NID</th>
+            <th>Due</th>
+            <th>Given</th>
+            <th>Branch</th>
+            <th>Payment Date</th>
+            <th>Total Savings</th>
+            <th>Total DPS</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>123456789</td>
+            <td>Member_Name_1</td>
+            <td>123456987</td>
+            <td>D</td>
+            <td>C</td>
+            <td>A</td>
+            <td>5-08-2024</td>
+            <td>B</td>
+            <td>E</td>
+            <td><a href='collection_n.html?loan_uid=$loan_uid'><button>View</button></a></td>
+        </tr>
+        <!-- More rows can go here -->
+    </table>
+
+</body>
+</html>

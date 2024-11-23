@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="add.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sign Up</title>
+</head>
+
+
+<body>
+    <div class="form">
+        <h2>Loan Giving Form</h2>
+        <p>Service Charge : 13.75%</p>
+        <div class="details">
+            <p>Name : <?php echo $Member_Name ?></p>
+            <p>Gardian Name : <?php echo $Gardian ?></p>
+            <p>Parmanent Address : <?php echo $parmanent ?></p>
+            <img src="php/member_img/<?php echo $image ?>"style="height: 80px; width: 80px; border-radius:50%; position: absolute; right:40px; top: 40px;">
+</div>
+
+        <form action="" autocomplete="off" method="POST" enctype="multipart/form-data">
+            <div class="error-text">Error</div>
+            <div class="grid-details">
+            <div class="input">
+                    <label>NID</label>
+                    <input type="text" name="nid"  value="<?php echo $nid ?>"  required>
+                </div>
+            
+                <div class="input">
+                    <label>Amount</label>
+                    <input type="text" name="amount"  value=""  placeholder="Amount" required>
+                </div>
+                <div class="input">
+                    <label>Purpose</label>
+                    <input type="text" name="purpose"  value=""  placeholder="Purpose of taking loan" required pattern="[a-zA-Z'-'\s]*">
+                </div>
+            </div>
+          
+         
+                <div class="input">
+                    <label>Loan Type</label>
+                    <select class="classic" style="height: 40px; text-align:center; width:100px; background:whitesmoke; border:none;font-size:16px;" name="types">
+                         <option>Weely</option>
+                         <option>Monthly</option>
+                         <option>One Time</option>
+                    </select>
+                  
+                
+                </div>
+            <div class="submit">
+                <input type="submit" value="Submit Loan" class="button">
+            </div>
+        </form>
+        <div class="link">Problem ?<a href="index.php">Back To Home</a></div>
+    </div>
+    <script src="js/loan.js"></script>
+</body>
+
+</html>
+
+

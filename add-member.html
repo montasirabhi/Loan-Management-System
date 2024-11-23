@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="add.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="form">
+        <h2>Member Adding Form</h2>
+        <p>It's free and always will be.</p>
+        <form action="" autocomplete="off" method="POST" enctype="multipart/form-data">
+            <div class="error-text">Error</div>
+            <div class="grid-details">
+                <div class="input">
+                    <label>Name</label>
+                    <input type="text" name="mname"  value=""  placeholder="Member Name" required pattern="[a-zA-Z'-'\s]*">
+                </div>
+                <div class="input">
+                    <label>Gardian Name</label>
+                    <input type="text" name="gname"  value=""  placeholder="Gardian Name" required pattern="[a-zA-Z'-'\s]*">
+                </div>
+            </div>
+            <div class="input">
+                        <label>NID Number</label>
+                    <input type="number" name="nid"  value="" placeholder="Enter NID Number" required>
+                </div>
+                <div class="input">
+                    <label>Phone</label>
+                    <input type="tel" name="mobile" value=""  placeholder="Phone Number" required pattern="[0-9]{11}" oninvalid="this.setCustomValidity('Enter 11 Digit Number')" oninput="this.setCustomValidity('')">
+                </div>
+                <div class="grid-details">
+                <div class="input">
+                    <label> Present Address</label>
+                    <input type="text" name="pre"  value=""  placeholder="Enter Present Address" required>
+                </div>
+                <div class="input">
+                    <label> Parmanent Address</label>
+                    <input type="text" name="par"  value=""  placeholder="Enter Parmanent Address " required>
+                </div>
+                
+            </div>
+            <div class="input">
+                    <label>Branch</label>
+                    <select class="classic" style="height: 40px; text-align:center; width:100px; background:whitesmoke; border:none;font-size:16px;" name="branch">
+                         <option>Bera</option>
+                         <option>Haturia</option>
+                         <option>Nakalia</option>
+                         <option>Sumasnari</option>
+                    </select>
+                  
+                
+                </div>
+            <div class="profile-img">
+                <div class="file-upload">
+                    <input type="file" id="image-preview"   value=""  name="image" class="file-input" required oninvalid="this.setCustomValidity('Select An Profile Image')" oninput="this.setCustomValidity('')">
+                    <i class="fa-solid fa-user-edit"></i>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Sign Up" class="button">
+            </div>
+        </form>
+        <div class="link">No One To Add ?<a href="index.html">Back To Home</a></div>
+    </div>
+    <script src="js/add.js"></script>
+</body>
+
+</html>

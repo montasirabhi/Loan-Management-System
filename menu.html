@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #efefef;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1876f2;
+            padding: 10px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-left ul li {
+            margin-right: 15px;
+        }
+
+        .nav-left ul li a {
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-user-icon img {
+            width: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .online {
+            position: relative;
+        }
+
+        .online::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            background: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+       
+     
+
+        .sidebar-links {
+            margin: 20px 5%;
+        }
+
+        .sidebar-links a {
+            display: block;
+            font-size: 18px;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            .logo {
+                width: 100px;
+            }
+
+            .nav-left ul li {
+                margin-right: 10px;
+            }
+
+            .nav-left ul li a {
+                font-size: 20px;
+            }
+
+            .nav-user-icon img {
+                width: 30px;
+            }
+
+            .sidebar-links a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="images/logo.png" class="logo" alt="Logo">
+            &nbsp; &nbsp;&nbsp; &nbsp;
+            <ul>
+                <li><a href="menu.html"><i class="fa-brands fa-creative-commons-nd"></i></a></li>
+                &nbsp; &nbsp;
+                <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="images/profile-1.jpg" alt="Profile Picture">
+            </div>
+        </div>
+    </nav>
+
+ 
+
+    <div class="sidebar-links">
+        <a href="collection_list.html">1. Collection List</a>
+        <a href="reset_pay.html">2. Reset Pay</a>
+        <a href="red_list.html">3. Red List</a>
+        <a href="quality.html">4. Quality Change</a>
+        <a href="next.html">5. Next Day List</a>
+        <a href="add-member.html">6. ADD MEMBERS</a>
+        <a href="members.html">7. SEE ALL MEMBERS</a>
+        <a href="my_members.html">8. MY MEMBERS</a>
+        <a href="collection.html">9. Collection</a>
+        <a href="dps_savings_collection.html">10. DPS & Savings</a>
+        <a href="withdraw_dps.html">11. Withdraw DPS</a>
+        <a href="withdraw_savings.html">12. Withdraw Savings</a>
+    </div>
+
+    
+</body>
+</html>
